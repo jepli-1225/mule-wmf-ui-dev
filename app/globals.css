@@ -1,0 +1,357 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 237, 241, 243;
+  --background-end-rgb: 237, 241, 243;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 237, 241, 243;
+    --background-start-rgb: 237, 241, 243;
+    --background-end-rgb: 237, 241, 243;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 3px;
+  text-align: left;
+  font-size: 9px;
+  padding-left: 6px;
+  padding-right: 6px;
+  vertical-align: top;
+}
+
+th {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 11px;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+td:first-child {
+  border-left: none;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(250, 250, 250, 255);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 255);
+}
+
+.right-aligned {
+  text-align: right;
+}
+
+.transaction-id-column {
+  width: 270px;
+  min-width: 100px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.header-box {
+  /* bg-white shadow pt-4 pb-4 flex justify-between items-center */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  align-items: left;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #ffffff;
+  display: flex;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.email-info-container {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
+}
+
+.email-info-popup {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 150%;
+  transform: translateY(-50%);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.email-info-container:hover .email-info-popup {
+  display: block;
+}
+
+.safe-html-content {
+  all: initial;
+  font-family: inherit;
+  color: inherit;
+}
+
+.safe-html-content * {
+  all: revert;
+}
+
+.safe-html-content ul,
+.safe-html-content ol {
+  padding-left: 20px;
+}
+
+.safe-html-content a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.safe-html-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.safe-html-content .list1-1 li {
+  font-size: 14px;
+  line-height: 1.428571429;
+  margin: 0 0 15px;
+  padding-left: 30px;
+  background: none;
+}
+
+.safe-html-content .list1-1 li a {
+  color: #5499c9;
+  font: inherit;
+}
+
+.description-info-container {
+  position: relative;
+}
+
+.description-info-popup {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  z-index: 1;
+  left: 16%;
+  top: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: rgb(0 0 0);
+}
+
+.description-info-container:hover .description-info-popup {
+  display: block;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #b3acab;
+  border-radius: 3px;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+  background-color: #f0f0f0;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+@keyframes shimmer-screen {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 40%,
+    transparent 100%
+  );
+  animation: shimmer-screen 3s infinite;
+}
+
+.advancedSearchContainer {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.advancedSearchContainer.open {
+  opacity: 1;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.advancedSearchButton {
+  transition: background-color 0.3s ease;
+}
+
+.advancedSearchButton:hover {
+  background-color: #f3f4f6;
+}
+
+input[readonly].default-cursor {
+  /* cursor: url("/app/no-symbol-cursor.png"), auto; */
+  cursor: default;
+}
+
+.chart-container {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.legend-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  max-width: 600px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.color-box {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.system-name {
+  font-size: 11px;
+  font-weight: semibold;
+}
+
+.pagination-buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.pagination-buttons button {
+  font-size: 11px;
+}

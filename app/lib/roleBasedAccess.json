@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "roleName": "ZIIT_ACK INTERFACEID Manager",
+    "columnName": "INTERFACEID",
+    "columnValue": "ZIIT_ACK",
+    "permissions": 7
+  },
+  {
+    "id": 2,
+    "roleName": "BANK BUSINESSEVENT Manager",
+    "columnName": "BUSINESSEVENT",
+    "columnValue": "BUSINESSEVENT",
+    "permissions": 3
+  }
+]

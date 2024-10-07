@@ -1,0 +1,57 @@
+var DataTypes = require("sequelize").DataTypes;
+var _ASYNCMESSAGESTORE = require("./ASYNCMESSAGESTORE");
+var _ASYNCQUEUEMAPPING = require("./ASYNCQUEUEMAPPING");
+var _DOMAIN = require("./DOMAIN");
+var _Delete_Metrics = require("./Delete_Metrics");
+var _ERROREVENT = require("./ERROREVENT");
+var _ERROREVENT_HISTORIC = require("./ERROREVENT_HISTORIC");
+var _INBOUNDEVENT = require("./INBOUNDEVENT");
+var _INBOUNDEVENT_HISTORIC = require("./INBOUNDEVENT_HISTORIC");
+var _INTERFACECONFIG = require("./INTERFACECONFIG");
+var _INTERFACEPERMISSIONS = require("./INTERFACEPERMISSIONS");
+var _JDE_MAPPING = require("./JDE_MAPPING");
+var _NOTIFICATIONCONFIG = require("./NOTIFICATIONCONFIG");
+var _OUTBOUNDEVENT = require("./OUTBOUNDEVENT");
+var _OUTBOUNDEVENT_HISTORIC = require("./OUTBOUNDEVENT_HISTORIC");
+
+function initModels(sequelize) {
+  var ASYNCMESSAGESTORE = _ASYNCMESSAGESTORE(sequelize, DataTypes);
+  var ASYNCQUEUEMAPPING = _ASYNCQUEUEMAPPING(sequelize, DataTypes);
+  var DOMAIN = _DOMAIN(sequelize, DataTypes);
+  var Delete_Metrics = _Delete_Metrics(sequelize, DataTypes);
+  var ERROREVENT = _ERROREVENT(sequelize, DataTypes);
+  var ERROREVENT_HISTORIC = _ERROREVENT_HISTORIC(sequelize, DataTypes);
+  var INBOUNDEVENT = _INBOUNDEVENT(sequelize, DataTypes);
+  var INBOUNDEVENT_HISTORIC = _INBOUNDEVENT_HISTORIC(sequelize, DataTypes);
+  var INTERFACECONFIG = _INTERFACECONFIG(sequelize, DataTypes);
+  var INTERFACEPERMISSIONS = _INTERFACEPERMISSIONS(sequelize, DataTypes);
+  var JDE_MAPPING = _JDE_MAPPING(sequelize, DataTypes);
+  var NOTIFICATIONCONFIG = _NOTIFICATIONCONFIG(sequelize, DataTypes);
+  var OUTBOUNDEVENT = _OUTBOUNDEVENT(sequelize, DataTypes);
+  var OUTBOUNDEVENT_HISTORIC = _OUTBOUNDEVENT_HISTORIC(sequelize, DataTypes);
+
+  ERROREVENT.belongsTo(INBOUNDEVENT, { as: "RELATEDINBOUNDINSTANCE_INBOUNDEVENT", foreignKey: "RELATEDINBOUNDINSTANCE"});
+  INBOUNDEVENT.hasMany(ERROREVENT, { as: "ERROREVENTs", foreignKey: "RELATEDINBOUNDINSTANCE"});
+  INTERFACEPERMISSIONS.belongsTo(INTERFACECONFIG, { as: "INTERFACECONFIG_INTERFACECONFIG", foreignKey: "INTERFACECONFIG"});
+  INTERFACECONFIG.hasMany(INTERFACEPERMISSIONS, { as: "INTERFACEPERMISSIONs", foreignKey: "INTERFACECONFIG"});
+
+  return {
+    ASYNCMESSAGESTORE,
+    ASYNCQUEUEMAPPING,
+    DOMAIN,
+    Delete_Metrics,
+    ERROREVENT,
+    ERROREVENT_HISTORIC,
+    INBOUNDEVENT,
+    INBOUNDEVENT_HISTORIC,
+    INTERFACECONFIG,
+    INTERFACEPERMISSIONS,
+    JDE_MAPPING,
+    NOTIFICATIONCONFIG,
+    OUTBOUNDEVENT,
+    OUTBOUNDEVENT_HISTORIC,
+  };
+}
+module.exports = initModels;
+module.exports.initModels = initModels;
+module.exports.default = initModels;

@@ -1,0 +1,65 @@
+[
+  {
+    "ID": 1,
+    "DOMAINID": "SG",
+    "DOMAINDESCRIPTION": "Singapore Domain",
+    "CREATEDBY": "403",
+    "CREATEDON": "2016-11-02T16:06:58",
+    "UPDATEDBY": "403",
+    "UPDATEDON": "2016-11-02T16:07:00"
+  },
+  {
+    "ID": 2,
+    "DOMAINID": "DEVSG",
+    "DOMAINDESCRIPTION": "test",
+    "CREATEDBY": "403",
+    "CREATEDON": "2016-11-02T16:18:56",
+    "UPDATEDBY": "",
+    "UPDATEDON": "1900-01-01T00:00:00"
+  },
+  {
+    "ID": 3,
+    "DOMAINID": "CN",
+    "DOMAINDESCRIPTION": "China Domain123",
+    "CREATEDBY": "",
+    "CREATEDON": "",
+    "UPDATEDBY": "kenneth.teohungliang",
+    "UPDATEDON": "2018-01-17T12:38:55"
+  },
+  {
+    "ID": 14,
+    "DOMAINID": "SG1",
+    "DOMAINDESCRIPTION": "Singapore Upgrade Domain",
+    "CREATEDBY": "kenneth.teohungliang",
+    "CREATEDON": "2019-06-10T18:07:22",
+    "UPDATEDBY": "",
+    "UPDATEDON": ""
+  },
+  {
+    "ID": 15,
+    "DOMAINID": "TESTDEV11",
+    "DOMAINDESCRIPTION": "TESTDEV11",
+    "CREATEDBY": "wilmarholdings.com\\teohlk",
+    "CREATEDON": "2020-02-07T10:09:14",
+    "UPDATEDBY": "",
+    "UPDATEDON": ""
+  },
+  {
+    "ID": 16,
+    "DOMAINID": "SG-MULE4",
+    "DOMAINDESCRIPTION": "Mule 4",
+    "CREATEDBY": "WILMARHOLDINGS.COM\\liwajs",
+    "CREATEDON": "2020-06-03T18:02:21",
+    "UPDATEDBY": "",
+    "UPDATEDON": ""
+  },
+  {
+    "ID": 17,
+    "DOMAINID": "SG-MULE3",
+    "DOMAINDESCRIPTION": "Singapore Domain for Mule 3.9.4",
+    "CREATEDBY": "febri.gea@id.wilmar-intl.com",
+    "CREATEDON": "2020-10-21T12:05:15",
+    "UPDATEDBY": "",
+    "UPDATEDON": ""
+  }
+]

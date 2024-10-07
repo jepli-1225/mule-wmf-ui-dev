@@ -1,0 +1,82 @@
+[
+  {
+    "ID": 2,
+    "INTERFACECONFIG": 12,
+    "USER": 393,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": false
+  },
+  {
+    "ID": 15,
+    "INTERFACECONFIG": 12,
+    "USER": 45,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": true
+  },
+  {
+    "ID": 16,
+    "INTERFACECONFIG": 13,
+    "USER": 45,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": true
+  },
+  {
+    "ID": 17,
+    "INTERFACECONFIG": 14,
+    "USER": 45,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": true
+  },
+  {
+    "ID": 19,
+    "INTERFACECONFIG": 16,
+    "USER": 45,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": true
+  },
+  {
+    "ID": 20,
+    "INTERFACECONFIG": 17,
+    "USER": 45,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": true
+  },
+  {
+    "ID": 21,
+    "INTERFACECONFIG": 110,
+    "USER": 460,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": true
+  },
+  {
+    "ID": 23,
+    "INTERFACECONFIG": 103,
+    "USER": 45,
+    "VIEW": true,
+    "DOWNLOAD": true,
+    "REPLAY": false
+  },
+  {
+    "ID": 25,
+    "INTERFACECONFIG": 103,
+    "USER": 435,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": true
+  },
+  {
+    "ID": 28,
+    "INTERFACECONFIG": 13,
+    "USER": 435,
+    "VIEW": false,
+    "DOWNLOAD": true,
+    "REPLAY": false
+  }
+]
