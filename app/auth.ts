@@ -1,11 +1,12 @@
 import NextAuth from "next-auth";
 import Cognito from "next-auth/providers/cognito";
 import Okta from "next-auth/providers/okta";
+import GithubProvider from "next-auth/providers/github"
 
 import type { Provider } from "next-auth/providers";
 import { authConfig } from "@/app/auth.config";
 
-const providers: Provider[] = [Okta, Cognito];
+const providers: Provider[] = [Okta, Cognito, GithubProvider];
 
 export const providerMap = providers.map((provider) => {
   if (typeof provider === "function") {
