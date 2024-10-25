@@ -33,6 +33,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       }
       return session;
     },
+    async pages: {
+        signIn: "/auth/signin",
+    },
   },
   providers,
 });
